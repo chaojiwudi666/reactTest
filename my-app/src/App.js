@@ -16,18 +16,25 @@ function App() {
   //   });
   //   console.log(`synthesisClick(AfterSet):${condition.num}`);
   // }
-  const realClick = ()=>{
+  // const realClick = ()=>{
    
-    console.log(`realClick(beforeSet):${condition.num}`);
-    let num = condition.num+1;
-    console.log(num);
-    setCondition({
-      num:num
-    });
-    console.log(`realClick(AfterSet):${condition.num}`);
-  }
+  //   console.log(`realClick(beforeSet):${condition.num}`);
+  //   let num = condition.num+1;
+  //   console.log(num);
+  //   setCondition({
+  //     num:num
+  //   });
+  //   console.log(`realClick(AfterSet):${condition.num}`);
+  // }
   useEffect(() => {
-    document.body.addEventListener('click', realClick, false)
+    setTimeout(()=> {
+      setCondition({
+        num:1
+      });
+      console.log(condition.num) // 输出更新后的值 --> 1
+    }, 100)
+    // console.log(111);
+    // document.body.addEventListener('click', realClick, false);
     // setCondition({
     //   num:1
     // });
